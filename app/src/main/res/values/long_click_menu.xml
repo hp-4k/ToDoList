@@ -1,0 +1,6 @@
+<resources>
+    <array name="long_click_menu">
+        <item>@string/edit_item</item>
+        <item>@string/delete_item</item>
+    </array>
+</resources>

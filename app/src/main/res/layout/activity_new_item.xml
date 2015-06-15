@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.pompecki.hubert.todolist.NewItem">
+
+    <TextView
+        android:text="@string/title"
+        android:layout_alignParentTop="true"
+        android:id="@+id/title_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/title_edit_text"
+        android:hint="@string/title_hint"
+        android:layout_below="@id/title_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/description_label"
+        android:text="@string/description"
+        android:layout_below="@id/title_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/description_edit_text"
+        android:hint="@string/description_hint"
+        android:gravity="top"
+        android:layout_below="@id/description_label"
+        android:layout_above="@+id/priority_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine" />
+
+    <TextView
+        android:id="@+id/priority_label"
+        android:text="@string/priority"
+        android:layout_above="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_above="@+id/add_item_button"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/low_priority_button"
+            android:text="@string/low_priority"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+        <RadioButton
+            android:id="@+id/medium_priority_button"
+            android:text="@string/medium_priority"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+        <RadioButton
+            android:id="@+id/high_priority_button"
+            android:text="@string/high_priority"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/add_item_button"
+        android:layout_alignParentBottom="true"
+        android:text="@string/add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
